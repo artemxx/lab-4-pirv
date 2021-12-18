@@ -18,5 +18,5 @@ hdfs dfs -put -f "${input_dir}" /user/root/input
 
 hadoop jar x.jar WordFilter input output "${filter_file}"
 
-hdfs dfs -get -f /user/root/out/* .
-cat part-r-00000
+hdfs dfs -get -f /user/root/output/* .
+# cat part-r-00000
