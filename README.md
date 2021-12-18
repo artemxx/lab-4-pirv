@@ -8,7 +8,7 @@
 
 Генерируем данные с помощью `python3 data_generator.py input_path filter_path n_urls n_filters`
 
-Переносим всё и распределённую filesystem и запускаем `MapReduce` с помощью скрипта `./run_jobs.sh input_path filter_path`, в файлике `part-r-00000` будет выход редьюса - ответ на задачу
+Переносим всё в распределённую filesystem и запускаем `MapReduce` с помощью скрипта `./run_jobs.sh input_path filter_path`, в файлике `part-r-00000` будет выход редьюса - ответ на задачу
 
 
 ### Materials
