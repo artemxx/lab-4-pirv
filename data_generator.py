@@ -6,8 +6,15 @@ import os
 from random import shuffle
 
 
+def only_letters(word):
+    for c in word:
+        if not 'a' <= c <= 'z':
+            return False
+    return True
+
+
 def get_parsed_text(text):
-    return [word for word in word_tokenize(text.lower()) if len(word) > 3]
+    return [word for word in word_tokenize(text.lower()) if len(word) > 3 and only_letters(word)]
 
 
 def extract_text(link):
