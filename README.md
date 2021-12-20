@@ -1,6 +1,6 @@
 # lab-4-pirv
 
-Используемое окружение: https://github.com/big-data-europe/docker-hadoop, возможно нужно будет ещё поставить питоновские `bs4`, `requests`, `nltk`, `lxml`
+Используемое окружение: https://github.com/big-data-europe/docker-hadoop, ещё добавил в контейнер питоновские `bs4`, `requests`, `nltk`, `lxml`
 
 Скачиваем репозиторий, делаем `docker-compose up -d`. Чтобы открыть *hadoop* в браузере, узнаём `IP` с помощью `docker inspect namenode | grep "IPAddress"`, а порт с помощью `docker ps`
 
