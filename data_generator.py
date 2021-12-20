@@ -24,7 +24,8 @@ def extract_text(link):
     for tag in soup.find_all('p'):
         if len(tag.text) > 1:
             res += get_parsed_text(tag.text)
-    return res
+    title = soup.find('h1').text
+    return title, res
 
 
 def main():
@@ -40,8 +41,8 @@ def main():
     for i, url in enumerate(urls[:n_urls]):
         with open(path + '/input_%d' % i, 'w') as f:
             url = url.strip()
-            f.write(url.split('/')[-1] + '\n')
-            cur_words = extract_text(url)
+            title, cur_words = extract_text(url)
+            f.write(title.encode('ascii', 'ignore').decode() + '\n')
             words += cur_words
             for word in cur_words:
                 f.write(word + '\n')
