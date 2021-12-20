@@ -61,7 +61,7 @@ public class WordFilter {
         List<String> filterWords = Files.readAllLines(Paths.get(args[2]));
         conf.setStrings("filter_words", filterWords.toArray(new String[filterWords.size()]));
 
-        Job job = Job.getInstance(conf, "word count");
+        Job job = Job.getInstance(conf, "word filter");
         job.setJarByClass(WordFilter.class);
 
         job.setMapperClass(FilterMapper.class);
